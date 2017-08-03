@@ -12,7 +12,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.flipkart</groupId>
     <artifactId>hbase-object-mapper</artifactId>
-    <version>1.7</version>
+    <version>1.7-ipp</version>
     <url>https://flipkart-incubator.github.io/hbase-object-mapper/</url>
     <scm>
         <url>https://github.com/flipkart-incubator/hbase-object-mapper</url>
@@ -41,6 +41,12 @@
             <id>HDPReleases</id>
             <name>HDP Releases</name>
             <url>http://repo.hortonworks.com/content/repositories/releases/</url>
+        </repository>
+        <repository>
+            <id>HDPReleasesPublic</id>
+            <name>HDP Releases Public</name>
+            <url>http://repo.hortonworks.com/content/groups/public/</url>
+            <!-- url>http://repo.hortonworks.com/content/repositories/releases/</url -->
         </repository>
     </repositories>
     <properties>
@@ -155,20 +161,6 @@
                         <id>attach-sources</id>
                         <goals>
                             <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
                         </goals>
                     </execution>
                 </executions>
